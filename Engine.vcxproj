@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7eb2cebf-808c-47ef-9962-87a53bfb5e60}</ProjectGuid>
+    <RootNamespace>Engine</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Includes;$(SolutionDir)Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Includes;$(SolutionDir)Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Includes;$(SolutionDir)Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)Includes;$(SolutionDir)Source;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PCH.h</PrecompiledHeaderFile>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)Libraries;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Systems\CollisionSystem.cpp" />
+    <ClCompile Include="Source\Constants\Constants.cpp" />
+    <ClCompile Include="Source\Systems\BoundsCheckingSystem.cpp" />
+    <ClCompile Include="Source\Systems\EntityMovementSystem.cpp" />
+    <ClCompile Include="Source\Systems\CameraFollowSystem.cpp" />
+    <ClCompile Include="Source\Systems\PlayerControllerSystem.cpp" />
+    <ClCompile Include="Source\ECS\ComponentIdGenerator.cpp" />
+    <ClCompile Include="Source\ECS\Registry.cpp" />
+    <ClCompile Include="Source\ECS\TagIdGenerator.cpp" />
+    <ClCompile Include="Source\Engine.cpp" />
+    <ClCompile Include="Source\EventManager\EventIdGenerator.cpp" />
+    <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\PCH.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Source\SceneManager\SceneManager.cpp" />
+    <ClCompile Include="Source\Systems\SpriteUpdateSystem.cpp" />
+    <ClCompile Include="Source\TextureManager\TextureManager.cpp" />
+    <ClCompile Include="Source\TileManager\TileManager.cpp" />
+    <ClCompile Include="Source\Systems\TextureRenderSystem.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Includes\SDL\SDL_image.h" />
+    <ClInclude Include="Source\Systems\CollisionSystem.h" />
+    <ClInclude Include="Source\Systems\BoundsCheckingSystem.h" />
+    <ClInclude Include="Source\Systems\EntityMovementSystem.h" />
+    <ClInclude Include="Source\Enums\Enums.h" />
+    <ClInclude Include="Source\Systems\CameraFollowSystem.h" />
+    <ClInclude Include="Includes\SDL\begin_code.h" />
+    <ClInclude Include="Includes\SDL\close_code.h" />
+    <ClInclude Include="Includes\SDL\SDL.h" />
+    <ClInclude Include="Includes\SDL\SDL_assert.h" />
+    <ClInclude Include="Includes\SDL\SDL_atomic.h" />
+    <ClInclude Include="Includes\SDL\SDL_audio.h" />
+    <ClInclude Include="Includes\SDL\SDL_bits.h" />
+    <ClInclude Include="Includes\SDL\SDL_blendmode.h" />
+    <ClInclude Include="Includes\SDL\SDL_clipboard.h" />
+    <ClInclude Include="Includes\SDL\SDL_config.h" />
+    <ClInclude Include="Includes\SDL\SDL_cpuinfo.h" />
+    <ClInclude Include="Includes\SDL\SDL_egl.h" />
+    <ClInclude Include="Includes\SDL\SDL_endian.h" />
+    <ClInclude Include="Includes\SDL\SDL_error.h" />
+    <ClInclude Include="Includes\SDL\SDL_events.h" />
+    <ClInclude Include="Includes\SDL\SDL_filesystem.h" />
+    <ClInclude Include="Includes\SDL\SDL_gamecontroller.h" />
+    <ClInclude Include="Includes\SDL\SDL_gesture.h" />
+    <ClInclude Include="Includes\SDL\SDL_guid.h" />
+    <ClInclude Include="Includes\SDL\SDL_haptic.h" />
+    <ClInclude Include="Includes\SDL\SDL_hidapi.h" />
+    <ClInclude Include="Includes\SDL\SDL_hints.h" />
+    <ClInclude Include="Includes\SDL\SDL_joystick.h" />
+    <ClInclude Include="Includes\SDL\SDL_keyboard.h" />
+    <ClInclude Include="Includes\SDL\SDL_keycode.h" />
+    <ClInclude Include="Includes\SDL\SDL_loadso.h" />
+    <ClInclude Include="Includes\SDL\SDL_locale.h" />
+    <ClInclude Include="Includes\SDL\SDL_log.h" />
+    <ClInclude Include="Includes\SDL\SDL_main.h" />
+    <ClInclude Include="Includes\SDL\SDL_messagebox.h" />
+    <ClInclude Include="Includes\SDL\SDL_metal.h" />
+    <ClInclude Include="Includes\SDL\SDL_misc.h" />
+    <ClInclude Include="Includes\SDL\SDL_mouse.h" />
+    <ClInclude Include="Includes\SDL\SDL_mutex.h" />
+    <ClInclude Include="Includes\SDL\SDL_name.h" />
+    <ClInclude Include="Includes\SDL\SDL_opengl.h" />
+    <ClInclude Include="Includes\SDL\SDL_opengles.h" />
+    <ClInclude Include="Includes\SDL\SDL_opengles2.h" />
+    <ClInclude Include="Includes\SDL\SDL_opengles2_gl2.h" />
+    <ClInclude Include="Includes\SDL\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="Includes\SDL\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="Includes\SDL\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="Includes\SDL\SDL_opengl_glext.h" />
+    <ClInclude Include="Includes\SDL\SDL_pixels.h" />
+    <ClInclude Include="Includes\SDL\SDL_platform.h" />
+    <ClInclude Include="Includes\SDL\SDL_power.h" />
+    <ClInclude Include="Includes\SDL\SDL_quit.h" />
+    <ClInclude Include="Includes\SDL\SDL_rect.h" />
+    <ClInclude Include="Includes\SDL\SDL_render.h" />
+    <ClInclude Include="Includes\SDL\SDL_revision.h" />
+    <ClInclude Include="Includes\SDL\SDL_rwops.h" />
+    <ClInclude Include="Includes\SDL\SDL_scancode.h" />
+    <ClInclude Include="Includes\SDL\SDL_sensor.h" />
+    <ClInclude Include="Includes\SDL\SDL_shape.h" />
+    <ClInclude Include="Includes\SDL\SDL_stdinc.h" />
+    <ClInclude Include="Includes\SDL\SDL_surface.h" />
+    <ClInclude Include="Includes\SDL\SDL_system.h" />
+    <ClInclude Include="Includes\SDL\SDL_syswm.h" />
+    <ClInclude Include="Includes\SDL\SDL_test.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_assert.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_common.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_compare.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_crc32.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_font.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_fuzzer.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_harness.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_images.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_log.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_md5.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_memory.h" />
+    <ClInclude Include="Includes\SDL\SDL_test_random.h" />
+    <ClInclude Include="Includes\SDL\SDL_thread.h" />
+    <ClInclude Include="Includes\SDL\SDL_timer.h" />
+    <ClInclude Include="Includes\SDL\SDL_touch.h" />
+    <ClInclude Include="Includes\SDL\SDL_types.h" />
+    <ClInclude Include="Includes\SDL\SDL_version.h" />
+    <ClInclude Include="Includes\SDL\SDL_video.h" />
+    <ClInclude Include="Includes\SDL\SDL_vulkan.h" />
+    <ClInclude Include="Source\Components\Components.h" />
+    <ClInclude Include="Source\Systems\PlayerControllerSystem.h" />
+    <ClInclude Include="Source\Constants\Constants.h" />
+    <ClInclude Include="Source\ECS\ComponentIdGenerator.h" />
+    <ClInclude Include="Source\ECS\ComponentSet.h" />
+    <ClInclude Include="Source\ECS\Registry.h" />
+    <ClInclude Include="Source\ECS\System.h" />
+    <ClInclude Include="Source\ECS\TagIdGenerator.h" />
+    <ClInclude Include="Source\ECS\Types.h" />
+    <ClInclude Include="Source\Engine.h" />
+    <ClInclude Include="Source\EventManager\EventIdGenerator.h" />
+    <ClInclude Include="Source\EventManager\EventManager.h" />
+    <ClInclude Include="Source\Events\Events.h" />
+    <ClInclude Include="Source\Macros.h" />
+    <ClInclude Include="Source\PCH.h" />
+    <ClInclude Include="Source\SceneManager\SceneManager.h" />
+    <ClInclude Include="Source\Systems\SpriteUpdateSystem.h" />
+    <ClInclude Include="Source\Tags\Tags.h" />
+    <ClInclude Include="Source\TextureManager\TextureManager.h" />
+    <ClInclude Include="Source\TileManager\TileManager.h" />
+    <ClInclude Include="Source\Systems\TextureRenderSystem.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include=".gitattributes" />
+    <None Include=".gitignore" />
+    <None Include="Assets\Maps\Jungle.map" />
+    <None Include="README.md" />
+    <None Include="SDL2.dll" />
+    <None Include="SDL2_image.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\Meshes\Grid.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="Assets\Meshes\Ico Sphere.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="Assets\Meshes\Monkey.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="Assets\Meshes\Torus.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="Assets\Meshes\UV Sphere.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\Meshes\Cube.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="Assets\Meshes\F22.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Assets\Meshes\Circle.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="Assets\Meshes\Cone.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="Assets\Meshes\Cylinder.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+    <Text Include="Assets\Meshes\Plane.obj">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\Images\Airplane-Spritesheet.png" />
+    <Image Include="Assets\Images\Boat.png" />
+    <Image Include="Assets\Images\Bullet.png" />
+    <Image Include="Assets\Images\Carrier.png" />
+    <Image Include="Assets\Images\Chopper-Spritesheet.png" />
+    <Image Include="Assets\Images\DestroyedTank.png" />
+    <Image Include="Assets\Images\LandingBase.png" />
+    <Image Include="Assets\Images\Projectile.png" />
+    <Image Include="Assets\Images\Radar.png" />
+    <Image Include="Assets\Images\Tank.png" />
+    <Image Include="Assets\Images\Truck.png" />
+    <Image Include="Assets\Maps\Jungle.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
